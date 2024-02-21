@@ -1,3 +1,6 @@
+# this is the bulletproof architecture 
+
+
 ## For Devlopement Or Run Server
 
 - npm run start
