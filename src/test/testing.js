@@ -38,8 +38,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongodb_1 = require("mongodb");
 // import config from '../config/index'
-var url = 'mongodb://localhost';
-var databaseName = 'CRUD';
+var url = "mongodb://localhost";
+var databaseName = "CRUD";
 var client = new mongodb_1.MongoClient(url);
 function main() {
     return __awaiter(this, void 0, void 0, function () {
@@ -52,7 +52,7 @@ function main() {
                         case 0: return [4 /*yield*/, collection_1.insertOne(data)];
                         case 1:
                             insertResult = _a.sent();
-                            console.log("Inserted document with _id : ".concat(insertResult.insertedId));
+                            console.log("Inserted : ".concat(insertResult.insertedId));
                             return [2 /*return*/];
                     }
                 });
@@ -98,15 +98,19 @@ function main() {
                     _a.sent();
                     console.log("Connected successfully to Database " + databaseName);
                     database = client.db(databaseName);
-                    collection_1 = database.collection('users');
+                    collection_1 = database.collection("users");
                     // Insert a user into the database
                     // await insertDocument({ name: 'John Doe', email: 'john@example.com',age:23 });
                     // update the user information in the database
-                    return [4 /*yield*/, updateDocument({ name: 'karan chavan' }, { name: 'vishal pote', email: 'vishal@example.com', age: 25 })];
+                    // await updateDocument({ name: "karan chavan" }, { name: "karan amar chavan", email: "karan@example.com", age: 25 });
+                    // Delete a user from the database
+                    return [4 /*yield*/, deleteDocument({ name: 'vishal pote' })];
                 case 2:
                     // Insert a user into the database
                     // await insertDocument({ name: 'John Doe', email: 'john@example.com',age:23 });
                     // update the user information in the database
+                    // await updateDocument({ name: "karan chavan" }, { name: "karan amar chavan", email: "karan@example.com", age: 25 });
+                    // Delete a user from the database
                     _a.sent();
                     return [3 /*break*/, 4];
                 case 3:
