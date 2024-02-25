@@ -16,3 +16,4 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off'
   },
 };
+
